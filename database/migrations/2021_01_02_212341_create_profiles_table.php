@@ -20,7 +20,7 @@ class CreateProfilesTable extends Migration
             $table->string("user_id");
             $table->string('profession')->nullable();
             $table->mediumText('img')->nullable();
-            $table->json('follow')->default("[]");
+            $table->string('follow')->default("[]");
             $table->timestamps();
         });
     }
