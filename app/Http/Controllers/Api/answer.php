@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Events\notin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\answer as answert;
@@ -49,8 +50,10 @@ class answer extends Controller
             "qusetion_id" => $request->qusetion_id,
             "read"=>1
         ]);
-        $redis = Redis::connection();
-        $redis->publish('message', json_encode(new answerapi($new)));
+        
+       // broadcast(new notin(new answerapi($new)));
+        // $redis = Redis::connection();
+        // $redis->publish('message', json_encode(new answerapi($new)));
         return  new answerapi($new);
     }
 
