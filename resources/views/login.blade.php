@@ -16,6 +16,6 @@
 <script>
     var app = <?php echo json_encode($token); ?>;
     Cookies.set('token', app,{ domain:'questionandanswer.vercel.app' })
-    window.location = ('https://questionandanswer.vercel.app') 
+  //  window.location = ('https://questionandanswer.vercel.app') 
  
 </script>
