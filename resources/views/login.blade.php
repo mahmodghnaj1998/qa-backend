@@ -15,7 +15,7 @@
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 <script>
     var app = <?php echo json_encode($token); ?>;
-    Cookies.set('token', app)
-    window.location = "http://localhost:3000/";
+    Cookies.set('token', app,{domin:"questionandanswer.vercel.app" })
+    window.location = "questionandanswer.vercel.app";
  
 </script>
