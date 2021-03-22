@@ -15,25 +15,55 @@ class lan extends Seeder
     public function run()
     {
         language::create([
+            "title"=>"Html"
+        ]);
+        language::create([
+            "title"=>"javascript"
+        ]);
+        language::create([
+            "title"=>"css"
+        ]);
+        language::create([
+            "title"=>"bootstrap"
+        ]);
+        language::create([
             "title"=>"php"
         ]);
         language::create([
             "title"=>"node"
         ]);
         language::create([
-            "title"=>"java"
+            "title"=>"Ruby"
+        ]);
+        language::create([
+            "title"=>"Python"
+        ]);
+        language::create([
+            "title"=>"Swift"
+        ]);
+        language::create([
+            "title"=>"C#"
+        ]);
+        language::create([
+            "title"=>"Java"
+        ]);
+        language::create([
+            "title"=>"Asp.net"
+        ]);
+        language::create([
+            "title"=>"sql"
         ]);
         language::create([
             "title"=>"laravel"
         ]);
         language::create([
-            "title"=>"javescript"
+            "title"=>"express"
         ]);
         language::create([
-            "title"=>"kotlen"
+            "title"=>"vue.js"
         ]);
         language::create([
-            "title"=>"c"
+            "title"=>"React.js"
         ]);
     }
 }
