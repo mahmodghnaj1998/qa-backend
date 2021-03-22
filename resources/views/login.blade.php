@@ -15,8 +15,8 @@
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 <script>
     var app = <?php echo json_encode($token); ?>;
-    Cookies.set('token', app,{ domain:'questionandanswer.vercel.app' })
-    Cookies.set('name', 'value', { domain: 'subdomain.site.com' });
-  //  window.location = ('https://questionandanswer.vercel.app') 
+     Cookies.set('token', app,{ domain:'questionandanswer.vercel.app' });
+    window.location = ('https://questionandanswer.vercel.app') 
+console.log(app);
  
 </script>

@@ -16,7 +16,11 @@ class socialite extends Controller
 
     public function redirectToProvider($provider)
     {
-        return Socialitee::driver($provider)->redirect();
+        
+        $url=Socialitee::driver($provider)->stateless()->redirect()->getTargetUrl();
+         return response()->json([
+             "url"=>$url
+         ]);
     }
 
     //////////////////////////////////////////////////
@@ -25,10 +29,12 @@ class socialite extends Controller
     public function handleProviderCallback($provider)
     {
 
-        $user = Socialitee::driver($provider)->user();
+        $user = Socialitee::driver($provider)->stateless()->user();
         $crate = $this->createorfind($user, $provider);
         $token = Auth::tokenById($crate->id);
-        return view('login')->with('token',$token);
+        return response()->json([
+            "token"=>$token
+        ]);
     }
 
     public function  createorfind($user, $proveder)
